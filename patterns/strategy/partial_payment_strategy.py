@@ -14,11 +14,11 @@ class PartialPaymentStrategy(PaymentStrategy):
         account.deduct_balance(payee, amount)
         
         #Get the updated balance
-        balance = account.get_balance(payee)
+        updated_balance = account.get_balance(payee)
 
         #Check if the balance is paid fully or partially
-        if balance <= 0:
+        if updated_balance <= 0:
             return f"Processed payment of ${amount:.2f}. New balance: $0.00."
         
         else:
-            return f"Partial payment of ${amount:.2f} accepted. New balance: ${balance:.2f}."
+            return f"Partial payment of ${amount:.2f} accepted. New balance: ${updated_balance:.2f}."
