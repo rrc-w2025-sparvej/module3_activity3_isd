@@ -3,7 +3,7 @@
 __author__ = "Sania Parvej"
 __version__ = "1.0.0"
 
-from billing_account.billing_account import PaymentStrategy
+from patterns.strategy.payment_strategy  import PaymentStrategy
 from payee.payee import Payee
 from billing_account.billing_account import BillingAccount
 
